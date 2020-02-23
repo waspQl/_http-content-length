@@ -24,14 +24,10 @@ app.use('/files', Express.static(
   path.join(__dirname, '/../jsons')
 ))
 
-app.get('/', (req, res) => {
-  res.send('GET is sended.')
-});
+// GET method routeを設定
+app.get('/');
 
-app.post('/', (req, res) => {
-  res.send('POST is sended.')
-});
-
+// Starts the HTTP server listening for connections
 app.listen(port, () => {
   console.log('server is up')
 
